@@ -116,14 +116,8 @@
                 }
                 input {
                     display: block;
-                    width: 100%;
-                    height: 45px;
-                    border: 1px solid #ddd;
-                    border-radius: 5px;
                     margin-top: 10px;
                     margin-bottom: 10px;
-                    padding: 0 15px;
-                    font-size: 1.3rem;
                 }
                 #confident {
                     width: auto;
@@ -165,7 +159,7 @@
                         }
                     }
                 }
-                &.box {
+                &.checkbox-confident {
                     display: flex;
                     align-items: center;
                 }
@@ -334,7 +328,7 @@
                     a {
                         color: $red;
                         border-color: $red;
-                        &:hover{
+                        &:hover {
                             background-color: rgba(252, 220, 237, 0.24);
                         }
                     }
@@ -395,6 +389,105 @@
                     }
                     .images__link {
                     }
+                }
+            }
+        }
+    }
+
+    .services {
+        padding: 20px 0 40px;
+        .container {
+            padding: 0 15px;
+            .services__inner {
+                padding: 30px 45px 0 35px;
+                border-radius: 10px;
+                height: 144px;
+                position: relative;
+                &:after,
+                &:before {
+                    width: 100%;
+                    height: 144px;
+                    top: 0;
+                    right: 0;
+                    content: "";
+                    position: absolute;
+                    border-radius: 10px;
+                }
+                &:after {
+                    background: url(../images/img/promo-form-bg-1.png) no-repeat right center;
+                    opacity: 0.5;
+                    z-index: -1;
+                }
+                &:before {
+                    background: linear-gradient(to right, #0a4d9c, #034294 50%, #4086c4 70%,#81cff7 100%);
+                    z-index: -2;
+                }
+
+                .services-info {
+                    display: flex;
+                    margin-bottom: 20px;
+                    .services-title {
+                        text-transform: uppercase;
+                        font-size: 1.44rem;
+                        font-weight: 700;
+                        span {
+                            background-color: $red;
+                            border: 1px dashed #fff;
+                            padding: 0px 5px;
+                        }
+                    }
+                    .services-descr {
+                        margin-left: 20px;
+                        font-size: 0.88rem;
+                        span {
+                            color: $blue-l;
+                        }
+                    }
+                }
+                .services-form {
+                    display: flex;
+                    align-items: center;
+                    .input {
+                        max-width: 222px;
+                        &::placeholder {
+                            color: #587ea7;
+                        }
+                        & + input {
+                            margin-left: 14px;
+                        }
+                    }
+                    .btn-gradient {
+                        background: linear-gradient(to right, $red, #b11269 50%, #a02167 100%);
+                        max-width: 200px;
+                        width: 100%;
+                        height: 45px;
+                        margin-left: 14px;
+                        &:hover{
+                            background: linear-gradient(to right, $red, #ac2871 50%, #ca0270 100%);
+                        }
+                    }
+                    .checkbox-confident {
+                        display: flex;
+                        align-items: center;
+                        line-height: 14px;
+                        margin-left: 16px;
+                        input {
+                        }
+                        span {
+                            margin-left: 30px;
+                            color: $blue-l;
+                            a {
+                                display: block;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                .services-doctor{
+                    position: absolute;
+                    content: '';
+                    right: 35px;
+                    bottom: -5px;
                 }
             }
         }

@@ -12,5 +12,7 @@ $(function () {
         slidesToScroll: 1,
         dots: false,
         arrows: true,
+        fade: true,
+        cssEase: 'linear',
     });
 });
