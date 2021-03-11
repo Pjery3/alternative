@@ -2,33 +2,182 @@
 @import "_vars.scss";
 @import "_global.scss";
 
-// .header {
+.header {
+    padding: 60px 0 105px;
+    &__items {
+        position: relative;
+        .header-item__wrapper {
+            display: flex;
+            align-items: center;
+            .slick-next,
+            .slick-prev {
+                font-size: 0px;
+                position: relative;
+                width: 48px;
+                height: 48px;
+                background-color: rgba(41, 63, 148, 0.7);
+                border-radius: 50%;
+                transition: all 0.2s;
+                &:hover {
+                    background-color: rgba(41, 63, 148, 1);
+                }
+                &:before {
+                    position: absolute;
+                    content: "";
+                    background: url(../images/img/arrow-left.svg) no-repeat;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 12px;
+                    height: 22px;
+                }
+            }
+            .slick-next {
+                &:before {
+                    transform: translate(-50%, -50%) rotate(180deg);
+                }
+            }
+            .slick-prev {
+            }
+            .slick-list {
+                max-width: 1140px;
+                margin: 0 auto;
+            }
+        }
+        .header-item {
+            &__title {
+                margin-top: 0;
+                max-width: 500px;
+                font-size: 2.6rem;
+                line-height: 48px;
+                font-weight: 400;
+                span {
+                    font-size: 3.33rem;
+                    font-weight: 700;
+                }
+            }
+            &__descr {
+                margin-bottom: 40px;
+                max-width: 500px;
+                color: #c5e8ff;
+            }
+            &__price {
+                margin-bottom: 40px;
+                font-size: 2.38rem;
+                .per {
+                    font-size: 1.66rem;
+                }
+                .promo {
+                    background-color: $red;
+                    border-top-left-radius: 40px;
+                    border-top-right-radius: 25px;
+                    border-bottom-right-radius: 25px;
+                    font-size: 0.88rem;
+                    padding: 5px 15px;
+                }
+            }
+            &__link {
+                margin-bottom: 30px;
+                a {
+                    font-size: 0.94rem;
+                    border-color: #bddff8;
+                    transition: all .2s;
+                    &:hover{
+                        background-color: #2a44ac;
+                    }
+                }
+            }
+        }
+        .header-form {
+            background: url(../images/img/girl-form.png) no-repeat;
+            background-position: right top;
+            padding: 40px 30px 45px;
+            max-width: 350px;
+            background-color: #fff;
+            border-radius: 5px;
+            position: absolute;
+            right: 14%;
+            top: 0%;
 
-//     &__items {
-        
-//         .header-item {
-//             max-width: 1140px;
-//             margin: 0 auto;
-//             &__title {
-//             }
-//             &__descr {
-//             }
-//             &__price {
-//                 .per {
-//                 }
-//                 .promo {
-//                 }
-//             }
-//             &__link {
-//             }
-//         }
-//         .header-form {
-//             &__title {
-//             }
-//             &__descr {
-//             }
-//         }
-//     }
-// }
+            &__title {
+                font-weight: 700;
+                font-size: 1.33rem;
+                color: $text-black;
+            }
+            &__descr {
+                font-size: 0.83rem;
+                color: #a4a4a4;
+                margin-bottom: 25px;
+            }
+            label {
+                span {
+                    font-size: 0.88rem;
+                    color: $grey;
+                }
+                input {
+                    display: block;
+                    width: 100%;
+                    height: 45px;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    padding: 0 15px;
+                    font-size: 1.3rem;
+                }
+                #confident {
+                    width: auto;
+                    height: auto;
+                    margin: 0;
+                    cursor: pointer;
+                    background-color: #ccc;
+                    position: absolute;
+                    &:after {
+                        display: none;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        content: "";
+                        background-image: url(../images/img/check.svg);
+                        height: 6px;
+                        width: 8px;
+                    }
+                    &:before {
+                        position: absolute;
+                        content: "";
+                        width: 13px;
+                        height: 13px;
+                        background-color: #eeeeee;
+                    }
+                    &:checked {
+                        &::after {
+                            display: block;
+                        }
+                    }
+
+                    & + span {
+                        font-size: 0.72rem;
+                        margin-left: 20px;
+                        color: #8d8d8d;
+                        a {
+                            color: #505050;
+                        }
+                    }
+                }
+                &.box {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            button {
+                width: 100%;
+                height: 50px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
 
 @import "_media.scss";
