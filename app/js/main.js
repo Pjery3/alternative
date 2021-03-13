@@ -15,4 +15,12 @@ $(function () {
         fade: true,
         cssEase: 'linear',
     });
+    $('.doctors-item-wrapper').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        dots: false,
+        arrows: true,
+    });
+    $('.cls-1').css({ fill: '#d0d0d0' });
 });

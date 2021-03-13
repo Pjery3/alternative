@@ -1,6 +1,18 @@
-$text: #fff ;
+$text: #fff;
 $red: #bb0367;
 $blue: #0b549d;
 $blue-l: #bdd9ff;
 $text-black: #011d3a;
 $grey: #5e5e5e;
+$name: #1555a5;
+
+@mixin pre {
+    font-size: 0.77em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+@mixin title {
+    margin-top: 25px;
+    font-size: 2.55em;
+    font-weight: 700;
+}

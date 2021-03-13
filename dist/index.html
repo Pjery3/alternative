@@ -108,14 +108,14 @@
                     </div>
                     <label for="name">
                         <span>Ваше имя:</span>
-                        <input type="text" id="name">
+                        <input class="input" type="text" id="name">
                     </label>
                     <label for="tel">
                         <span>Ваш телефон:</span>
-                        <input type="tel" id="tel">
+                        <input class="input" type="tel" id="tel">
                     </label>
                     <button class="btn-gradient" type="submit">Оставить заявку</button>
-                    <label for="confident" class="box">
+                    <label for="confident" class="checkbox-confident">
                         <input type="checkbox" id="confident">
                         <span>Согласен(на) с <a href="#">политикой конфиденциальности</a></span>
                     </label>
@@ -169,8 +169,8 @@
                     <div class="about-doc">
                         <div class="doc-top">
                             <div class="doc-title">
-                               <span>Наши</span>
-                               <span>документы:</span>
+                                <span>Наши</span>
+                                <span>документы:</span>
                             </div>
                             <div class="doc-top__link btn">
                                 <a href="#">смотреть все</a>
@@ -190,7 +190,193 @@
 
         <section class="services">
             <div class="container">
-                .services
+                <div class="services__inner">
+                    <div class="services-info">
+                        <div class="services-title">
+                            СКИДКА <span>5%</span> НА ВСЕ УСЛУГИ
+                        </div>
+                        <div class="services-descr">
+                            При заказе звонка на сайте. <span>Мы перезвоним вам через 5 минут</span>
+                        </div>
+                    </div>
+                    <form class="services-form">
+                        <input class="input" type="text" id="name" placeholder="Ваше имя">
+                        <input class="input" type="tel" id="tel" placeholder="Ваш телефон">
+                        <button class="btn-gradient" type="submit">Оставить заявку</button>
+                        <label for="confident-1" class="checkbox-confident">
+                            <input type="checkbox" id="confident-1">
+                            <span id="confident-1">Согласен(на) с <a href="#">политикой конфиденциальности</a></span>
+                        </label>
+                    </form>
+                    <img class="services-doctor" src="images/img/doctor-abs.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="doctors">
+            <div class="container-fluid">
+                <div class="doctors__items">
+                    <div class="doctors-item-wrapper container">
+
+                        <div class="doctors-item">
+                            <div class="item-top">
+                                <img src="images/content/doctors-1.jpg" alt="">
+                            </div>
+                            <div class="item-bot">
+                                <div class="doctor-surname">
+                                    Гиниатуллин
+                                </div>
+                                <div class="doctor-name">
+                                    Дамир Ильдарович
+                                </div>
+                                <div class="doctor-pos">
+                                    (руководитель клиники)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="doctors-item">
+                            <div class="item-top">
+                                <img src="images/content/doctors-2.jpg" alt="">
+                            </div>
+                            <div class="item-bot">
+                                <div class="doctor-surname">
+                                    Мингазов
+                                </div>
+                                <div class="doctor-name">
+                                    Адель Эдуардович
+                                </div>
+                                <div class="doctor-pos">
+                                    (главный врач, нарколог)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="doctors-item">
+                            <div class="item-top">
+                                <img src="images/content/doctors-3.jpg" alt="">
+                            </div>
+                            <div class="item-bot">
+                                <div class="doctor-surname">
+                                    Маринин
+                                </div>
+                                <div class="doctor-name">
+                                    Валерий Александрович
+                                </div>
+                                <div class="doctor-pos">
+                                    <div>(психолог-нарколог,</div>
+                                    <div>клинический психолог)</div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="doctors-item doctors-item-border">
+                            <div class="item-top item-top-icon">
+                                <div class="item-top__img">
+                                    <img class="doctor-icon" src="images/img/doctor.svg" alt="">
+                                    <img class="loope-icon" src="images/img/loope.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="item-bot">
+                                <div class="item-bot__title">
+                                    Мы собрали команду
+                                    лучших специалистов
+                                </div>
+                                <div class="item-bot__descr">
+                                    Врачи психиатры-наркологи,
+                                    психиатры, психотерапевты,
+                                    психологи
+                                </div>
+                                <div class="btn">
+                                    <a href="#">Все врачи</a>
+                                </div>
+                                <button class="btn-gradient">
+                                    Получить помощь
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="doctors-item">
+                            <div class="item-top">
+                                <img src="images/content/doctors-1.jpg" alt="">
+                            </div>
+                            <div class="item-bot">
+                                <div class="doctor-surname">
+                                    Гиниатуллин
+                                </div>
+                                <div class="doctor-name">
+                                    Дамир Ильдарович
+                                </div>
+                                <div class="doctor-pos">
+                                    (руководитель клиники)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="doctors-item">
+                            <div class="item-top">
+                                <img src="images/content/doctors-2.jpg" alt="">
+                            </div>
+                            <div class="item-bot">
+                                <div class="doctor-surname">
+                                    Мингазов
+                                </div>
+                                <div class="doctor-name">
+                                    Адель Эдуардович
+                                </div>
+                                <div class="doctor-pos">
+                                    (главный врач, нарколог)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="doctors-item">
+                            <div class="item-top">
+                                <img src="images/content/doctors-3.jpg" alt="">
+                            </div>
+                            <div class="item-bot">
+                                <div class="doctor-surname">
+                                    Маринин
+                                </div>
+                                <div class="doctor-name">
+                                    Валерий Александрович
+                                </div>
+                                <div class="doctor-pos">
+                                    (психолог-нарколог,
+                                    клинический психолог)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="doctors-item doctors-item-border">
+                            <div class="item-top item-top-icon">
+                                <div class="item-top__img">
+                                    <img class="doctor-icon" src="images/img/doctor-small.png" alt="">
+                                    <img class="loope-icon" src="images/img/loupe.png" alt="">
+                                </div>
+                            </div>
+                            <div class="item-bot">
+                                <div class="item-bot__title">
+                                    Мы собрали команду
+                                    лучших специалистов
+                                </div>
+                                <div class="item-bot__descr">
+                                    Врачи психиатры-наркологи,
+                                    психиатры, психотерапевты,
+                                    психологи
+                                </div>
+                                <div class="btn">
+                                    <a href="#">Все врачи</a>
+                                </div>
+                                <button class="btn-gradient">
+                                    Получить помощь
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 

@@ -419,7 +419,7 @@
                     z-index: -1;
                 }
                 &:before {
-                    background: linear-gradient(to right, #0a4d9c, #034294 50%, #4086c4 70%,#81cff7 100%);
+                    background: linear-gradient(to right, #0a4d9c, #034294 50%, #4086c4 70%, #81cff7 100%);
                     z-index: -2;
                 }
 
@@ -462,7 +462,7 @@
                         width: 100%;
                         height: 45px;
                         margin-left: 14px;
-                        &:hover{
+                        &:hover {
                             background: linear-gradient(to right, $red, #ac2871 50%, #ca0270 100%);
                         }
                     }
@@ -483,11 +483,165 @@
                         }
                     }
                 }
-                .services-doctor{
+                .services-doctor {
                     position: absolute;
-                    content: '';
+                    content: "";
                     right: 35px;
                     bottom: -5px;
+                }
+            }
+        }
+    }
+
+    .doctors {
+        padding: 40px 0 20px;
+        text-align: center;
+        &-pre {
+            @include pre;
+            color: $red;
+        }
+        &-title {
+            @include title;
+            color: $text-black;
+        }
+        &-line{
+            margin-bottom: 30px;
+        }
+        &__items {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .doctors-item-wrapper {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                .slick-next,
+                .slick-prev {
+                    font-size: 0px;
+                    position: relative;
+                    width: 48px;
+                    height: 48px;
+                    background-color: rgba(255, 255, 255, 1);
+                    border: 1px solid  #eee;
+                    border-radius: 50%;
+                    transition: all 0.2s;
+                    &:hover {
+                        background-color: rgba(187, 187, 250, 0.205);
+                        &:before{
+                            background-color: $name;
+                        }
+                    }
+                    &:before {
+                        position: absolute;
+                        content: "";
+                        mask: url(../images/img/arrow-left.svg);
+                        background-color: #d0d0d0;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 12px;
+                        height: 22px;
+                        
+                    }
+                }
+                .slick-next {
+                    &:before {
+                        transform: translate(-50%, -50%) rotate(180deg);
+                    }
+                }
+                .slick-prev {
+                }
+                .slick-list {
+                    max-width: 1140px;
+                    margin: 0 auto;
+                    height: 450px;
+                }
+                .doctors-item {
+                    box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.05);
+                    max-width: 265px;
+                    height: 447px;
+                    border-radius: 10px;
+                    display: block;
+                    &-border {
+                        border: 1px dashed #ccc;
+                    }
+                    .item-top {
+                        img {
+                            max-width: 265px;
+                            max-height: 303px;
+                            border-top-left-radius: 10px;
+                            border-top-right-radius: 10px;
+                        }
+                        &-icon {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 130px;
+                            .item-top__img {
+                                width: 92px;
+                                height: 92px;
+                                border-radius: 50%;
+                                background-color: #e7f7fd;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                img {
+                                    &.doctor-icon {
+                                    }
+                                    &.loope-icon {
+                                        padding-top: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .item-bot {
+                        padding: 25px;
+                        .doctor-surname,
+                        .doctor-name {
+                            color: $name;
+                            font-weight: 700;
+                            font-size: 1.1rem;
+                        }
+                        .doctor-pos {
+                            font-size: 0.83rem;
+                            color: #999;
+                            margin-top: 10px;
+                            line-height: 16px;
+                        }
+                        &__title {
+                            color: $red;
+                            font-weight: 700;
+                            font-size: 1.1rem;
+                            margin-bottom: 15px;
+                        }
+                        &__descr {
+                            color: #999999;
+                            font-size: 0.77rem;
+                            margin-bottom: 40px;
+                        }
+                        .btn {
+                            margin-bottom: 30px;
+                            a {
+                                color: $name;
+                                border-color: $name;
+                                padding: 15px 65px;
+                                font-weight: 700;
+                                &:hover{
+                                    background-color: rgba(220, 227, 252, 0.418);
+                                }
+                            }
+                        }
+                        .btn-gradient {
+                            background: linear-gradient(to right, $red, #b11269 50%, #a02167 100%);
+                            width: 100%;
+                            height: 45px;
+                            text-transform: none;
+                            &:hover {
+                                background: linear-gradient(to right, $red, #ac2871 50%, #ca0270 100%);
+                            }
+                        }
+                    }
                 }
             }
         }
