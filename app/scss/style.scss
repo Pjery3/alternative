@@ -504,7 +504,7 @@
             @include title;
             color: $text-black;
         }
-        &-line{
+        &-line {
             margin-bottom: 30px;
         }
         &__items {
@@ -522,12 +522,12 @@
                     width: 48px;
                     height: 48px;
                     background-color: rgba(255, 255, 255, 1);
-                    border: 1px solid  #eee;
+                    border: 1px solid #eee;
                     border-radius: 50%;
                     transition: all 0.2s;
                     &:hover {
                         background-color: rgba(187, 187, 250, 0.205);
-                        &:before{
+                        &:before {
                             background-color: $name;
                         }
                     }
@@ -541,7 +541,6 @@
                         transform: translate(-50%, -50%);
                         width: 12px;
                         height: 22px;
-                        
                     }
                 }
                 .slick-next {
@@ -627,7 +626,7 @@
                                 border-color: $name;
                                 padding: 15px 65px;
                                 font-weight: 700;
-                                &:hover{
+                                &:hover {
                                     background-color: rgba(220, 227, 252, 0.418);
                                 }
                             }
@@ -642,6 +641,24 @@
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+    .collective {
+        padding-top: 20px;
+        background-size: cover;
+        min-height: 425px;
+        &__inner {
+            background: url(../images/img/star.png) no-repeat center top;
+            background-size: 411px 397px;
+            text-align: center;
+            width: 100%;
+            .collective-img {
+                position: relative;
+                left: -5px;
+                bottom: -44px;
+                img {
                 }
             }
         }
