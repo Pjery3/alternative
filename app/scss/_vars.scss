@@ -16,3 +16,25 @@ $name: #1555a5;
     font-size: 2.55em;
     font-weight: 700;
 }
+
+@mixin shufflebtn {
+    background-color: #0a3f7f;
+    border: 1px solid $blue-l;
+    border-radius: 5px;
+    font-size: 0.83em;
+    min-width: 123px;
+    height: 40px;
+    padding: 0 13px;
+    color: #fff;
+    transition: all 0.2s;
+    &.active {
+        color: $red;
+        background-color: #fff;
+    }
+    &:hover {
+        &:not(.active) {
+            color: #393cfa;
+            background-color: $blue-l;
+        }
+    }
+}

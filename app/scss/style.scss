@@ -3,48 +3,52 @@
 @import "_global.scss";
 
 .header {
-    padding: 60px 0 105px;
-    &__items {
         position: relative;
-        .header-item__wrapper {
+        .header__inner {
             display: flex;
             align-items: center;
             .slick-next,
             .slick-prev {
                 font-size: 0px;
-                position: relative;
+                position: absolute;
                 width: 48px;
                 height: 48px;
                 background-color: rgba(41, 63, 148, 0.7);
                 border-radius: 50%;
                 transition: all 0.2s;
+                z-index: 5;
+                margin: 0 180px;
+                margin-bottom: 100px;
                 &:hover {
                     background-color: rgba(41, 63, 148, 1);
                 }
                 &:before {
                     position: absolute;
                     content: "";
-                    background: url(../images/img/arrow-left.svg) no-repeat;
+                    mask: url(../images/img/arrow-left.svg) no-repeat;
                     left: 50%;
                     top: 50%;
                     transform: translate(-50%, -50%);
                     width: 12px;
                     height: 22px;
+                    background-color: #fff;
+                    
                 }
             }
             .slick-next {
+                right: 0;
                 &:before {
                     transform: translate(-50%, -50%) rotate(180deg);
                 }
             }
             .slick-prev {
+                left: 0;
             }
-            .slick-list {
-                max-width: 1140px;
-                margin: 0 auto;
+            .slick-list {  
             }
         }
         .header-item {
+            padding: 60px 0 100px;
             &__title {
                 margin-top: 0;
                 max-width: 500px;
@@ -96,8 +100,8 @@
             background-color: #fff;
             border-radius: 5px;
             position: absolute;
-            right: 14%;
-            top: 0%;
+            right: 22%;
+            top: 10%;
 
             &__title {
                 font-weight: 700;
@@ -171,7 +175,6 @@
                 margin-bottom: 15px;
             }
         }
-    }
 }
 
 .main-content {
@@ -656,10 +659,64 @@
             width: 100%;
             .collective-img {
                 position: relative;
+                display: flex;
+                justify-content: center;
+                z-index: 5;
                 left: -5px;
                 bottom: -44px;
+                &:before {
+                    position: absolute;
+                    content: "";
+                    width: 30%;
+                    $height: 50%;
+                    height: $height;
+                    bottom: (30% - $height);
+                    background-color: rgb(255, 255, 255);
+                    filter: blur(200px);
+                    z-index: -1;
+                }
                 img {
                 }
+            }
+        }
+    }
+}
+.footer {
+    background: url(../images/img/footer-bg-left.png) no-repeat left 10px top 60px,
+        url(../images/img/footer-bg-right.png) no-repeat right 10px top 10px, rgba(4, 54, 119, 1);
+    padding: 85px 25px 120px;
+    text-align: center;
+    &-pre {
+        @include pre;
+        color: #80c3ff;
+    }
+    &-title {
+        @include title;
+    }
+    &-line {
+        margin-bottom: 30px;
+    }
+    .btn-groups {
+        margin-bottom: 75px;
+        .btn {
+            @include shufflebtn;
+        }
+    }
+    &-photos {
+        .slick-track {
+            display: flex;
+            justify-content: flex-start;
+            min-width: 1920px;
+        }
+        .slick-slide {
+            min-width: 360px;
+            margin-right: 12px;
+            outline: none;
+        }
+        .footer-photo {
+            img {
+                border-radius: 10px;
+                margin: 0;
             }
         }
     }
