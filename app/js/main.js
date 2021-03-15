@@ -30,8 +30,6 @@ $(function () {
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
-                    dots: true,
-                    arrows: false,
                 }
             },
             {
@@ -39,8 +37,6 @@ $(function () {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    dots: true,
-                    arrows: false,
                 }
             },
             {
@@ -48,10 +44,12 @@ $(function () {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    dots: true,
-                    arrows: false,
                 }
-            }
+            },
+            
+            
+            
+            
             // You can unslick at a given breakpoint now by adding:
             // settings: "unslick"
             // instead of a settings object
@@ -71,7 +69,6 @@ $(function () {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-
                 }
                 
             },

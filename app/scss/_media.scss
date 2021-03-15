@@ -25,7 +25,17 @@
     }
     .main-content .doctors__items .doctors-item-wrapper .slick-next,
     .main-content .doctors__items .doctors-item-wrapper .slick-prev {
-        margin: 0 10px;
+        position: absolute;
+        top: 105%;
+    }
+    .main-content .doctors__items .doctors-item-wrapper .slick-prev{
+        left:  calc(48% - 50px);
+    }
+    .main-content .doctors__items .doctors-item-wrapper .slick-next{
+        right: calc(48% - 50px);
+    }
+    .main-content .doctors{
+        padding: 40px 0 100px;
     }
     .main-content .doctors__items .doctors-item-wrapper {
         display: block;
